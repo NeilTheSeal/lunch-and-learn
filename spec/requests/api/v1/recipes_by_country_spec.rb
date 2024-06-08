@@ -8,7 +8,7 @@ RSpec.describe "Recipes by Country" do
       serialize_with: :json
     ) do |cassette|
       get(
-        "/api/v1/recipes_by_country",
+        "/api/v1/recipes",
         headers: {
           "Content-Type": "application/json",
           "Accept": "application/json"
@@ -59,7 +59,7 @@ RSpec.describe "Recipes by Country" do
       serialize_with: :json
     ) do |cassette|
       get(
-        "/api/v1/recipes_by_country",
+        "/api/v1/recipes",
         headers: {
           "Content-Type": "application/json",
           "Accept": "application/json"
@@ -94,7 +94,7 @@ RSpec.describe "Recipes by Country" do
       serialize_with: :json
     ) do |cassette|
       get(
-        "/api/v1/recipes_by_country",
+        "/api/v1/recipes",
         headers: {
           "Content-Type": "application/json",
           "Accept": "application/json"
@@ -121,7 +121,7 @@ RSpec.describe "Recipes by Country" do
       serialize_with: :json
     ) do |cassette|
       get(
-        "/api/v1/recipes_by_country",
+        "/api/v1/recipes",
         headers: {
           "Content-Type": "application/json",
           "Accept": "application/json"
