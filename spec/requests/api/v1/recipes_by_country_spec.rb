@@ -6,7 +6,7 @@ RSpec.describe "Recipes by Country" do
     VCR.use_cassette(
       "search_by_country",
       serialize_with: :json
-    ) do |cassette|
+    ) do
       get(
         "/api/v1/recipes",
         headers: {
@@ -18,22 +18,14 @@ RSpec.describe "Recipes by Country" do
         }
       )
 
-      body = JSON.parse(
-        cassette.serializable_hash.dig(
-          "http_interactions", 0, "response", "body", "string"
-        ),
-        symbolize_names: true
-      )
-
-      expect(body).to have_key(:data)
-      data = body[:data]
+      data = JSON.parse(response.body, symbolize_names: true)[:data]
 
       expect(data).to be_an(Array)
       expect(data.length > 1).to eq(true)
       expect(data.first[:id]).to eq(nil)
       expect(data.first[:type]).to eq("recipe")
       expect(data.first[:attributes]).to be_a(Hash)
-      expect(data.first[:attributes[:title]]).to be_a(String)
+      expect(data.first[:attributes][:title]).to be_a(String)
       expect(data.first[:attributes][:url]).to be_a(String)
       expect(data.first[:attributes][:country]).to be_a(String)
       expect(data.first[:attributes][:image]).to be_a(String)
@@ -57,7 +49,7 @@ RSpec.describe "Recipes by Country" do
     VCR.use_cassette(
       "no_country_provided",
       serialize_with: :json
-    ) do |cassette|
+    ) do
       get(
         "/api/v1/recipes",
         headers: {
@@ -66,22 +58,14 @@ RSpec.describe "Recipes by Country" do
         }
       )
 
-      body = JSON.parse(
-        cassette.serializable_hash.dig(
-          "http_interactions", 0, "response", "body", "string"
-        ),
-        symbolize_names: true
-      )
-
-      expect(body).to have_key(:data)
-      data = body[:data]
+      data = JSON.parse(response.body, symbolize_names: true)[:data]
 
       expect(data).to be_an(Array)
       expect(data.length > 1).to eq(true)
       expect(data.first[:id]).to eq(nil)
       expect(data.first[:type]).to eq("recipe")
       expect(data.first[:attributes]).to be_a(Hash)
-      expect(data.first[:attributes[:title]]).to be_a(String)
+      expect(data.first[:attributes][:title]).to be_a(String)
       expect(data.first[:attributes][:url]).to be_a(String)
       expect(data.first[:attributes][:country]).to be_a(String)
       expect(data.first[:attributes][:image]).to be_a(String)
@@ -92,7 +76,7 @@ RSpec.describe "Recipes by Country" do
     VCR.use_cassette(
       "empty_country_string_provided",
       serialize_with: :json
-    ) do |cassette|
+    ) do
       get(
         "/api/v1/recipes",
         headers: {
@@ -104,14 +88,7 @@ RSpec.describe "Recipes by Country" do
         }
       )
 
-      body = JSON.parse(
-        cassette.serializable_hash.dig(
-          "http_interactions", 0, "response", "body", "string"
-        ),
-        symbolize_names: true
-      )
-
-      expect(body[:data]).to eq([])
+      expect(JSON.parse(response.body, symbolize_names: true)[:data]).to eq([])
     end
   end
 
@@ -131,14 +108,7 @@ RSpec.describe "Recipes by Country" do
         }
       )
 
-      body = JSON.parse(
-        cassette.serializable_hash.dig(
-          "http_interactions", 0, "response", "body", "string"
-        ),
-        symbolize_names: true
-      )
-
-      expect(body[:data]).to eq([])
+      expect(JSON.parse(response.body, symbolize_names: true)[:data]).to eq([])
     end
   end
 end
