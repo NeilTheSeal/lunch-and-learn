@@ -34,6 +34,7 @@ class GeocodeService
       faraday.params["format"] = "json"
       faraday.params["categories"] = "tourism"
       faraday.params["filter"] = "circle:#{lon},#{lat},10000"
+      faraday.params["limit"] = 10
     end
 
     response = conn.get("/v2/places")

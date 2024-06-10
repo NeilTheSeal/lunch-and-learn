@@ -21,7 +21,7 @@ RSpec.describe "Tourist Sites by Country" do
       data = JSON.parse(response.body, symbolize_names: true)[:data]
 
       expect(data).to be_an(Array)
-      expect(data.length > 1).to eq(true)
+      expect(data.length).to eq(10)
       expect(data.first[:id]).to eq(nil)
       expect(data.first[:type]).to eq("tourist_site")
       expect(data.first[:attributes]).to be_a(Hash)
