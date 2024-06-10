@@ -1,5 +1,6 @@
 require "rails_helper"
 
+# rubocop:disable Metrics/BlockLength
 RSpec.describe GeocodeService do
   describe "class methods" do
     describe ".tourist_sites" do
@@ -39,3 +40,4 @@ RSpec.describe GeocodeService do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength
