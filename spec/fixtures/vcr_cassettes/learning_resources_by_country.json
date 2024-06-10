@@ -1,0 +1,74 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://www.googleapis.com/youtube/v3/search?channelId=UCluQ5yInbeAkkeCndNnUhpw&key=AIzaSyBF4Sy_5-aDmkF7nggkuhYmwF49JhhLdCk&part=snippet&q=italy",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "Accept": [
+            "application/json"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "User-Agent": [
+            "Faraday v2.9.1"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Content-Type": [
+            "application/json; charset=UTF-8"
+          ],
+          "Vary": [
+            "Origin",
+            "Referer",
+            "X-Origin"
+          ],
+          "Date": [
+            "Sun, 09 Jun 2024 00:59:27 GMT"
+          ],
+          "Server": [
+            "scaffolding on HTTPServer2"
+          ],
+          "Cache-Control": [
+            "private"
+          ],
+          "X-Xss-Protection": [
+            "0"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "Alt-Svc": [
+            "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+          ],
+          "Transfer-Encoding": [
+            "chunked"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\n  \"kind\": \"youtube#searchListResponse\",\n  \"etag\": \"AMZF1rc_gvdY56OtrTKoLrlZM9o\",\n  \"nextPageToken\": \"CAUQAA\",\n  \"regionCode\": \"US\",\n  \"pageInfo\": {\n    \"totalResults\": 66,\n    \"resultsPerPage\": 5\n  },\n  \"items\": [\n    {\n      \"kind\": \"youtube#searchResult\",\n      \"etag\": \"xFIsZPGenJc5hO9kCKiAxq40yUs\",\n      \"id\": {\n        \"kind\": \"youtube#video\",\n        \"videoId\": \"DD4wjwaFU-U\"\n      },\n      \"snippet\": {\n        \"publishedAt\": \"2021-05-07T03:20:53Z\",\n        \"channelId\": \"UCluQ5yInbeAkkeCndNnUhpw\",\n        \"title\": \"A Super Quick History of Italy\",\n        \"description\": \"Sources: \\\"A Brief History of Italy\\\" (2018) by Jeremy Black. Robinson Publishing, London. \\\"The Pursuit of Italy: A History of its ...\",\n        \"thumbnails\": {\n          \"default\": {\n            \"url\": \"https://i.ytimg.com/vi/DD4wjwaFU-U/default.jpg\",\n            \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\": {\n            \"url\": \"https://i.ytimg.com/vi/DD4wjwaFU-U/mqdefault.jpg\",\n            \"width\": 320,\n            \"height\": 180\n          },\n          \"high\": {\n            \"url\": \"https://i.ytimg.com/vi/DD4wjwaFU-U/hqdefault.jpg\",\n            \"width\": 480,\n            \"height\": 360\n          }\n        },\n        \"channelTitle\": \"Mr History\",\n        \"liveBroadcastContent\": \"none\",\n        \"publishTime\": \"2021-05-07T03:20:53Z\"\n      }\n    },\n    {\n      \"kind\": \"youtube#searchResult\",\n      \"etag\": \"PYsOMebSVzjO5cskUsJ4rzQXvTI\",\n      \"id\": {\n        \"kind\": \"youtube#video\",\n        \"videoId\": \"PypS-ffoL-U\"\n      },\n      \"snippet\": {\n        \"publishedAt\": \"2023-04-26T11:58:34Z\",\n        \"channelId\": \"UCluQ5yInbeAkkeCndNnUhpw\",\n        \"title\": \"A Super Quick History of San Marino\",\n        \"description\": \"Pictures Requiring Attribution: Szeder László: https://commons.wikimedia.org/wiki/File:RSM-Borgo_Maggiore050.jpg ...\",\n        \"thumbnails\": {\n          \"default\": {\n            \"url\": \"https://i.ytimg.com/vi/PypS-ffoL-U/default.jpg\",\n            \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\": {\n            \"url\": \"https://i.ytimg.com/vi/PypS-ffoL-U/mqdefault.jpg\",\n            \"width\": 320,\n            \"height\": 180\n          },\n          \"high\": {\n            \"url\": \"https://i.ytimg.com/vi/PypS-ffoL-U/hqdefault.jpg\",\n            \"width\": 480,\n            \"height\": 360\n          }\n        },\n        \"channelTitle\": \"Mr History\",\n        \"liveBroadcastContent\": \"none\",\n        \"publishTime\": \"2023-04-26T11:58:34Z\"\n      }\n    },\n    {\n      \"kind\": \"youtube#searchResult\",\n      \"etag\": \"ZJkFj3KZmZq5NAaKXJKEerJHxpE\",\n      \"id\": {\n        \"kind\": \"youtube#channel\",\n        \"channelId\": \"UCluQ5yInbeAkkeCndNnUhpw\"\n      },\n      \"snippet\": {\n        \"publishedAt\": \"2017-05-14T04:40:16Z\",\n        \"channelId\": \"UCluQ5yInbeAkkeCndNnUhpw\",\n        \"title\": \"Mr History\",\n        \"description\": \"Hi there, welcome to Mr History! On this channel I'd like to answer the common and uncommon questions people have about ...\",\n        \"thumbnails\": {\n          \"default\": {\n            \"url\": \"https://yt3.ggpht.com/ytc/AIdro_lV-XAQasAohZa78U3ohV7Kkd-r6bX8rSRQY_3n6R_o7Sk=s88-c-k-c0xffffffff-no-rj-mo\"\n          },\n          \"medium\": {\n            \"url\": \"https://yt3.ggpht.com/ytc/AIdro_lV-XAQasAohZa78U3ohV7Kkd-r6bX8rSRQY_3n6R_o7Sk=s240-c-k-c0xffffffff-no-rj-mo\"\n          },\n          \"high\": {\n            \"url\": \"https://yt3.ggpht.com/ytc/AIdro_lV-XAQasAohZa78U3ohV7Kkd-r6bX8rSRQY_3n6R_o7Sk=s800-c-k-c0xffffffff-no-rj-mo\"\n          }\n        },\n        \"channelTitle\": \"Mr History\",\n        \"liveBroadcastContent\": \"none\",\n        \"publishTime\": \"2017-05-14T04:40:16Z\"\n      }\n    },\n    {\n      \"kind\": \"youtube#searchResult\",\n      \"etag\": \"7UbSMXA0vyi2HBSvTj-o8kkQ5uA\",\n      \"id\": {\n        \"kind\": \"youtube#video\",\n        \"videoId\": \"nQh6V8adGXw\"\n      },\n      \"snippet\": {\n        \"publishedAt\": \"2023-01-07T00:17:39Z\",\n        \"channelId\": \"UCluQ5yInbeAkkeCndNnUhpw\",\n        \"title\": \"A Super Quick History of Portugal\",\n        \"description\": \"Sources: \\\"A Concise History of Portugal\\\" (2018) by David Birmingham. Cambridge University Press, Cambridge, UK.\",\n        \"thumbnails\": {\n          \"default\": {\n            \"url\": \"https://i.ytimg.com/vi/nQh6V8adGXw/default.jpg\",\n            \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\": {\n            \"url\": \"https://i.ytimg.com/vi/nQh6V8adGXw/mqdefault.jpg\",\n            \"width\": 320,\n            \"height\": 180\n          },\n          \"high\": {\n            \"url\": \"https://i.ytimg.com/vi/nQh6V8adGXw/hqdefault.jpg\",\n            \"width\": 480,\n            \"height\": 360\n          }\n        },\n        \"channelTitle\": \"Mr History\",\n        \"liveBroadcastContent\": \"none\",\n        \"publishTime\": \"2023-01-07T00:17:39Z\"\n      }\n    },\n    {\n      \"kind\": \"youtube#searchResult\",\n      \"etag\": \"mGmhIpeg1rjdwgpE5DSX3aOqUG8\",\n      \"id\": {\n        \"kind\": \"youtube#playlist\",\n        \"playlistId\": \"PLVRhJQ5GttaJJo5HY1JcEVihUpSV6fz5o\"\n      },\n      \"snippet\": {\n        \"publishedAt\": \"2019-08-02T20:36:34Z\",\n        \"channelId\": \"UCluQ5yInbeAkkeCndNnUhpw\",\n        \"title\": \"Super Quick Histories!\",\n        \"description\": \"\",\n        \"thumbnails\": {\n          \"default\": {\n            \"url\": \"https://i.ytimg.com/vi/MfGoJrqh0Gk/default.jpg\",\n            \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\": {\n            \"url\": \"https://i.ytimg.com/vi/MfGoJrqh0Gk/mqdefault.jpg\",\n            \"width\": 320,\n            \"height\": 180\n          },\n          \"high\": {\n            \"url\": \"https://i.ytimg.com/vi/MfGoJrqh0Gk/hqdefault.jpg\",\n            \"width\": 480,\n            \"height\": 360\n          }\n        },\n        \"channelTitle\": \"Mr History\",\n        \"liveBroadcastContent\": \"none\",\n        \"publishTime\": \"2019-08-02T20:36:34Z\"\n      }\n    }\n  ]\n}\n"
+        }
+      },
+      "recorded_at": "Sun, 09 Jun 2024 00:59:27 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.2.0"
+}
