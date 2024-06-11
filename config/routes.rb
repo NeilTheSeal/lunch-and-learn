@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :recipes, only: [:index]
       resources :learning_resources, only: [:index]
+      resources :users, only: %i[create]
     end
   end
 end
