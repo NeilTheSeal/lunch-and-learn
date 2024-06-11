@@ -1,5 +1,6 @@
 require "rails_helper"
 
+# rubocop:disable Metrics/BlockLength
 RSpec.describe "Favorites API", type: :request do
   before(:each) do
     @user = User.create!(
@@ -22,7 +23,7 @@ RSpec.describe "Favorites API", type: :request do
         },
         headers: {
           "Content-Type": "application/json",
-          "Accept": "application/json"
+          Accept: "application/json"
         }
       )
 
@@ -46,7 +47,7 @@ RSpec.describe "Favorites API", type: :request do
         },
         headers: {
           "Content-Type": "application/json",
-          "Accept": "application/json"
+          Accept: "application/json"
         }
       )
 
@@ -59,3 +60,4 @@ RSpec.describe "Favorites API", type: :request do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength
