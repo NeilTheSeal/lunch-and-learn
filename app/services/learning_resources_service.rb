@@ -34,12 +34,18 @@ class LearningResourcesService
       }
     end
 
+    video = if item.nil?
+              {}
+            else
+              {
+                title: item[:snippet][:title],
+                youtube_video_id: item[:id][:videoId]
+              }
+            end
+
     {
       country: @country,
-      video: {
-        title: item[:snippet][:title],
-        youtube_video_id: item[:id][:videoId]
-      },
+      video:,
       images:
     }
   end
