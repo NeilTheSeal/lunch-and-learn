@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       resources :recipes, only: [:index]
       resources :learning_resources, only: [:index]
       resources :users, only: %i[create]
+      resources :sessions, only: %i[create]
     end
   end
 end
