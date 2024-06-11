@@ -148,7 +148,7 @@ RSpec.describe "Favorites API", type: :request do
         "/api/v1/favorites",
         params: {
           api_key: "123456"
-        }.to_json,
+        },
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json"
@@ -167,7 +167,7 @@ RSpec.describe "Favorites API", type: :request do
 
       favorite = data.first
 
-      expect(favorite[:id]).to eq(@favorite1.id)
+      expect(favorite[:id]).to eq(@favorite1.id.to_s)
       expect(favorite[:type]).to eq("favorite")
       expect(favorite[:attributes][:country]).to eq("thailand")
       expect(favorite[:attributes][:recipe_link]).to eq("https://www.tastingtable.com/")
@@ -179,7 +179,7 @@ RSpec.describe "Favorites API", type: :request do
         "/api/v1/favorites",
         params: {
           api_key: "1234567"
-        }.to_json,
+        },
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json"
@@ -192,6 +192,28 @@ RSpec.describe "Favorites API", type: :request do
 
       expect(body).to have_key(:error)
       expect(body[:error]).to eq("Invalid API key")
+    end
+
+    it "returns an empty list if the user has no favorites" do
+      @user.favorites.destroy_all
+
+      get(
+        "/api/v1/favorites",
+        params: {
+          api_key: "123456"
+        },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        }
+      )
+
+      expect(response).to have_http_status(:ok)
+
+      body = JSON.parse(response.body, symbolize_names: true)
+
+      expect(body[:data]).to be_an(Array)
+      expect(body[:data].length).to eq(0)
     end
   end
 end
