@@ -4,6 +4,7 @@ class LearningResourcesFacade
   end
 
   def learning_resources
-    LearningResourcesService.new(@country).learning_resources
+    data = LearningResourcesService.new(@country).learning_resources
+    LearningResource.new(data)
   end
 end

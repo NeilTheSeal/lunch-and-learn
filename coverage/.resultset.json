@@ -223,7 +223,6 @@
           1,
           null,
           null,
-          null,
           1,
           null,
           1,
@@ -238,6 +237,20 @@
           null
         ]
       },
+      "/Users/neilhendren/Documents/turing/mod_3/mod_3_final_project/app/poros/learning_resource.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/neilhendren/Documents/turing/mod_3/mod_3_final_project/app/facades/learning_resources_facade.rb": {
         "lines": [
           1,
@@ -247,7 +260,16 @@
           null,
           1,
           1,
+          1,
           null,
+          null
+        ]
+      },
+      "/Users/neilhendren/Documents/turing/mod_3/mod_3_final_project/app/serializers/learning_resource_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
           null
         ]
       },
@@ -272,12 +294,36 @@
           1,
           null,
           1,
+          null,
           1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          15,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1717896199
+    "timestamp": 1718140800
   }
 }

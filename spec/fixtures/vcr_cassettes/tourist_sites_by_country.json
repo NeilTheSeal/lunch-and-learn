@@ -1,0 +1,184 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://api.geoapify.com/v1/geocode/search?apiKey=32bb02599ef24a81a63e14c5d60e6dc2&country=France&format=json",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "Content-Type": [
+            "application/json"
+          ],
+          "Accept": [
+            "application/json"
+          ],
+          "User-Agent": [
+            "Faraday v2.9.1"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Date": [
+            "Mon, 10 Jun 2024 15:38:47 GMT"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Transfer-Encoding": [
+            "chunked"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Api-Version": [
+            "1.0"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Access-Control-Allow-Headers": [
+            "accept, accept-language, content-language, access-control-max-age, access-control-allow-headers, access-control-allow-methods, access-control-allow-origin, allow, api-version, cf-ray, content-encoding, content-type, date, expect-ct, server, status, vary, cache-control, etag, last-modified, expires, host, cf-timezone, cf-pseudo-ipv4, accept-encoding, x-forwarded-for, x-forwarded-proto, cf-visitor, user-agent, cf-connecting-ip, cdn-loop, cf-ipcity, cf-ipcontinent, cf-ipcountry, cf-iplatitude, cf-iplongitude, cf-metro-code, cf-postal-code, cf-region, cf-region-code, x-forwarded-port"
+          ],
+          "Access-Control-Allow-Methods": [
+            "GET, POST, DELETE, OPTIONS, PUT"
+          ],
+          "Access-Control-Allow-Credentials": [
+            "true"
+          ],
+          "Vary": [
+            "Accept-Encoding"
+          ],
+          "Cache-Control": [
+            "private, max-age=0, no-cache"
+          ],
+          "Content-Disposition": [
+            "inline; filename=response.json"
+          ],
+          "Cf-Cache-Status": [
+            "DYNAMIC"
+          ],
+          "Report-To": [
+            "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=ZheqfptrjfMANK%2FESnvNYOb0GBV%2FgSrxWWlwN4CRqLpxZxd9LEDYCcFvcHC6je7y8qOcadkln0qjqBWEDkaPg0Ptkhg6tsmQ4svSQ4BDbUP6dmZ4SegrhtPqqszF7JuHkTHd%2FIKKQNsPoQJq%2B4o%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+          ],
+          "Nel": [
+            "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+          ],
+          "Server": [
+            "cloudflare"
+          ],
+          "Cf-Ray": [
+            "891a7349da285209-DEN"
+          ],
+          "Alt-Svc": [
+            "h3=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"results\":[{\"datasource\":{\"sourcename\":\"openstreetmap\",\"attribution\":\"© OpenStreetMap contributors\",\"license\":\"Open Database License\",\"url\":\"https://www.openstreetmap.org/copyright\"},\"country\":\"France\",\"country_code\":\"fr\",\"lon\":1.8883335,\"lat\":46.603354,\"result_type\":\"country\",\"formatted\":\"France\",\"address_line1\":\"France\",\"address_line2\":\"\",\"category\":\"administrative\",\"timezone\":{\"name\":\"Europe/Paris\",\"offset_STD\":\"+01:00\",\"offset_STD_seconds\":3600,\"offset_DST\":\"+02:00\",\"offset_DST_seconds\":7200,\"abbreviation_STD\":\"CET\",\"abbreviation_DST\":\"CEST\"},\"plus_code\":\"8FR3JV3Q+88\",\"rank\":{\"importance\":1.0233264437396503,\"popularity\":5.325744118786215,\"confidence\":1,\"match_type\":\"match_by_country_or_state\"},\"place_id\":\"51390f27309d36fe3f5995f430b43a4d4740f00101f901329a210000000000c0020b\",\"bbox\":{\"lon1\":-178.3873749,\"lat1\":-50.2187169,\"lon2\":172.3057152,\"lat2\":51.3055721}}],\"query\":{\"text\":\"\",\"country\":\"France\",\"parsed\":{\"country\":\"France\",\"expected_type\":\"unknown\"}}}"
+        }
+      },
+      "recorded_at": "Mon, 10 Jun 2024 15:38:47 GMT"
+    },
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://api.geoapify.com/v2/places?apiKey=32bb02599ef24a81a63e14c5d60e6dc2&categories=tourism&filter=circle:46.603354,1.8883335,100000&format=json",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "Content-Type": [
+            "application/json"
+          ],
+          "Accept": [
+            "application/json"
+          ],
+          "User-Agent": [
+            "Faraday v2.9.1"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Date": [
+            "Mon, 10 Jun 2024 15:38:48 GMT"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Transfer-Encoding": [
+            "chunked"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Api-Version": [
+            "1.0"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Access-Control-Allow-Headers": [
+            "accept, accept-language, content-language, access-control-max-age, access-control-allow-headers, access-control-allow-methods, access-control-allow-origin, allow, api-version, cf-ray, content-encoding, content-type, date, expect-ct, server, status, vary, cache-control, etag, last-modified, expires, host, cf-timezone, cf-pseudo-ipv4, accept-encoding, x-forwarded-for, x-forwarded-proto, cf-visitor, user-agent, cf-connecting-ip, cdn-loop, cf-ipcity, cf-ipcontinent, cf-ipcountry, cf-iplatitude, cf-iplongitude, cf-metro-code, cf-postal-code, cf-region, cf-region-code, x-forwarded-port"
+          ],
+          "Access-Control-Allow-Methods": [
+            "GET, POST, DELETE, OPTIONS, PUT"
+          ],
+          "Access-Control-Allow-Credentials": [
+            "true"
+          ],
+          "Vary": [
+            "Accept-Encoding"
+          ],
+          "Cache-Control": [
+            "private, max-age=0, no-cache"
+          ],
+          "Cf-Cache-Status": [
+            "DYNAMIC"
+          ],
+          "Report-To": [
+            "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=e0vwR1VHGl3tsrAnExIRDciovd4t%2BQ3sj5QsOm3gFpS%2FqGkl5mTYVhHPbyiMTfVVjGIp%2F87SBflHMIiAOIUZhCP9a2ip4dsEqoncO5AQV7ukSDRKphzQic9R6gU61Ex5dg69tXlJV1qR3qIvSiI%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+          ],
+          "Nel": [
+            "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+          ],
+          "Server": [
+            "cloudflare"
+          ],
+          "Cf-Ray": [
+            "891a734d0cc6519e-DEN"
+          ],
+          "Alt-Svc": [
+            "h3=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"type\":\"FeatureCollection\",\"features\":[{\"type\":\"Feature\",\"properties\":{\"name\":\"Balad District\",\"country\":\"Somalia\",\"country_code\":\"so\",\"state\":\"Middle Shebelle\",\"county\":\"Balad District\",\"lon\":45.9123836,\"lat\":2.3598217,\"formatted\":\"Balad District, Somalia\",\"address_line1\":\"Balad District\",\"address_line2\":\"Somalia\",\"categories\":[\"tourism\",\"tourism.sights\"],\"details\":[],\"datasource\":{\"sourcename\":\"openstreetmap\",\"attribution\":\"© OpenStreetMap contributors\",\"license\":\"Open Database License\",\"url\":\"https://www.openstreetmap.org/copyright\",\"raw\":{\"osm_id\":4745982522,\"historic\":\"wreck\",\"osm_type\":\"n\",\"seamark:type\":\"wreck\"}},\"historic\":{\"type\":\"wreck\"},\"place_id\":\"5111b45dfcc8f4464059d47c0633eae00240f00103f9013af2e11a01000000\"},\"geometry\":{\"type\":\"Point\",\"coordinates\":[45.912383600000005,2.359821699748503]}}]}"
+        }
+      },
+      "recorded_at": "Mon, 10 Jun 2024 15:38:48 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.2.0"
+}

@@ -10,17 +10,24 @@ RSpec.describe "Learning Resources by Country" do
         "/api/v1/learning_resources",
         headers: {
           "Content-Type": "application/json",
-          "Accept": "application/json"
+          Accept: "application/json"
         },
         params: {
           country: "italy"
         }
       )
 
-      data = JSON.parse(response.body, symbolize_names: true)
+      hash = JSON.parse(response.body, symbolize_names: true)
+      data = hash[:data]
 
-      require "pry"
-      binding.pry
+      expect(data[:id]).to eq(nil)
+      expect(data[:type]).to eq("learning_resource")
+      expect(data[:attributes]).to be_a(Hash)
+      expect(data[:attributes][:country]).to eq("italy")
+      expect(data[:attributes][:video][:title]).to be_a(String)
+      expect(data[:attributes][:video][:youtube_video_id]).to be_a(String)
+      expect(data[:attributes][:images]).to be_an(Array)
+      expect(data[:attributes][:images].empty?).to eq(false)
     end
   end
 end
