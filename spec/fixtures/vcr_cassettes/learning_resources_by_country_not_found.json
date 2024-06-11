@@ -1,0 +1,174 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://www.googleapis.com/youtube/v3/search?channelId=UCluQ5yInbeAkkeCndNnUhpw&key=AIzaSyBF4Sy_5-aDmkF7nggkuhYmwF49JhhLdCk&part=snippet&q=basbdh",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "Accept": [
+            "application/json"
+          ],
+          "Content-Type": [
+            "application/json"
+          ],
+          "User-Agent": [
+            "Faraday v2.9.1"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Content-Type": [
+            "application/json; charset=UTF-8"
+          ],
+          "Vary": [
+            "Origin",
+            "Referer",
+            "X-Origin"
+          ],
+          "Date": [
+            "Tue, 11 Jun 2024 21:22:50 GMT"
+          ],
+          "Server": [
+            "scaffolding on HTTPServer2"
+          ],
+          "Cache-Control": [
+            "private"
+          ],
+          "X-Xss-Protection": [
+            "0"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Content-Type-Options": [
+            "nosniff"
+          ],
+          "Alt-Svc": [
+            "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+          ],
+          "Transfer-Encoding": [
+            "chunked"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\n  \"kind\": \"youtube#searchListResponse\",\n  \"etag\": \"UBAOiXjvY0CZ7Ub9tJDO9bUtsU8\",\n  \"regionCode\": \"US\",\n  \"pageInfo\": {\n    \"totalResults\": 0,\n    \"resultsPerPage\": 0\n  },\n  \"items\": []\n}\n"
+        }
+      },
+      "recorded_at": "Tue, 11 Jun 2024 21:22:50 GMT"
+    },
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://api.pexels.com/v1/search?query=basbdh",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "Authorization": [
+            "GpkBDpCyDjJIRnfD2fglFgtdwj2KKs8ncWCrWBbIlgGip02YsUIyiFNQ"
+          ],
+          "User-Agent": [
+            "Faraday v2.9.1"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ],
+          "Accept": [
+            "*/*"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Date": [
+            "Tue, 11 Jun 2024 21:22:51 GMT"
+          ],
+          "Content-Type": [
+            "application/json; charset=utf-8"
+          ],
+          "Transfer-Encoding": [
+            "chunked"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Cf-Ray": [
+            "8924a8acd84f5197-DEN"
+          ],
+          "Cf-Cache-Status": [
+            "MISS"
+          ],
+          "Access-Control-Allow-Origin": [
+            "*"
+          ],
+          "Cache-Control": [
+            "max-age=86400"
+          ],
+          "Etag": [
+            "W/\"5188ac46f9d89b65c048e79e02f554ce\""
+          ],
+          "Expires": [
+            "Wed, 12 Jun 2024 21:22:51 GMT"
+          ],
+          "Access-Control-Allow-Headers": [
+            "Accept, Content-Type, Content-Length, Accept-Encoding, Authorization, User-Agent"
+          ],
+          "X-Frame-Options": [
+            "SAMEORIGIN"
+          ],
+          "X-Ratelimit-Limit": [
+            "25000"
+          ],
+          "X-Ratelimit-Remaining": [
+            "24993"
+          ],
+          "X-Ratelimit-Reset": [
+            "1720730239"
+          ],
+          "X-Request-Id": [
+            "2d5eb9a6-7275-4231-9f0f-e6dbb2697714"
+          ],
+          "X-Runtime": [
+            "0.025812"
+          ],
+          "Set-Cookie": [
+            "__cf_bm=kIdD6kJPsn5oLcr4IMegrHKUq9fqAuakf_WA0fJ4Me0-1718140971-1.0.1.1-iDYaGdzyO.Lzeh.KhdQD0obpawjl9CtSjQUYhGD5lvfg5Pls5.cr5nayaIDZARMKigXE38Q87dbTgHWoBZBomg; path=/; expires=Tue, 11-Jun-24 21:52:51 GMT; domain=.pexels.com; HttpOnly; Secure; SameSite=None"
+          ],
+          "Vary": [
+            "Accept-Encoding"
+          ],
+          "Server": [
+            "cloudflare"
+          ],
+          "Alt-Svc": [
+            "h3=\":443\"; ma=86400"
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"page\":1,\"per_page\":15,\"photos\":[],\"total_results\":0}"
+        }
+      },
+      "recorded_at": "Tue, 11 Jun 2024 21:22:51 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.2.0"
+}

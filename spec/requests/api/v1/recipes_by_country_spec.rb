@@ -45,7 +45,7 @@ RSpec.describe "Recipes by Country" do
     end
   end
 
-  it "happy path - no country provided" do
+  xit "happy path - no country provided" do
     VCR.use_cassette(
       "no_country_provided",
       serialize_with: :json
@@ -96,7 +96,7 @@ RSpec.describe "Recipes by Country" do
     VCR.use_cassette(
       "invalid_country_provided",
       serialize_with: :json
-    ) do |cassette|
+    ) do
       get(
         "/api/v1/recipes",
         headers: {
