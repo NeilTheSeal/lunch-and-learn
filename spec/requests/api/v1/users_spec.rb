@@ -1,5 +1,6 @@
 require "rails_helper"
 
+# rubocop:disable Metrics/BlockLength
 RSpec.describe "Users API", type: :request do
   describe "POST /api/v1/users" do
     it "happy path - creates a new user" do
@@ -91,7 +92,7 @@ RSpec.describe "Users API", type: :request do
 
   describe "POST /api/v1/sessions" do
     it "happy path - logs in a user" do
-      user = User.create(
+      User.create(
         name: "test",
         email: "test@test.com",
         password: "password",
@@ -130,7 +131,7 @@ RSpec.describe "Users API", type: :request do
     end
 
     it "sad path - bad credentials (bad email)" do
-      user = User.create(
+      User.create(
         name: "test",
         email: "test@test.com",
         password: "password",
@@ -158,7 +159,7 @@ RSpec.describe "Users API", type: :request do
     end
 
     it "sad path - bad credentials (bad password)" do
-      user = User.create(
+      User.create(
         name: "test",
         email: "test@test.com",
         password: "password",
@@ -186,3 +187,4 @@ RSpec.describe "Users API", type: :request do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength
