@@ -125,5 +125,74 @@ RSpec.describe "Favorites API", type: :request do
       expect(body[:error]).to eq("Recipe title can't be blank")
     end
   end
+
+  describe "GET /api/v1/favorites" do
+    before(:each) do
+      @favorite1 = Favorite.create!(
+        country: "thailand",
+        recipe_link: "https://www.tastingtable.com/",
+        recipe_title: "Thai Basil Chicken",
+        user: @user
+      )
+
+      @favorite2 = Favorite.create!(
+        country: "japan",
+        recipe_link: "https://www.justonecookbook.com/",
+        recipe_title: "Teriyaki Chicken",
+        user: @user
+      )
+    end
+
+    it "returns a list of favorites" do
+      get(
+        "/api/v1/favorites",
+        params: {
+          api_key: "123456"
+        }.to_json,
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        }
+      )
+
+      expect(response).to have_http_status(:ok)
+
+      body = JSON.parse(response.body, symbolize_names: true)
+
+      expect(body[:data]).to be_an(Array)
+
+      data = body[:data]
+
+      expect(data.length).to eq(2)
+
+      favorite = data.first
+
+      expect(favorite[:id]).to eq(@favorite1.id)
+      expect(favorite[:type]).to eq("favorite")
+      expect(favorite[:attributes][:country]).to eq("thailand")
+      expect(favorite[:attributes][:recipe_link]).to eq("https://www.tastingtable.com/")
+      expect(favorite[:attributes][:recipe_title]).to eq("Thai Basil Chicken")
+    end
+
+    it "returns an error if the api key is invalid" do
+      get(
+        "/api/v1/favorites",
+        params: {
+          api_key: "1234567"
+        }.to_json,
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        }
+      )
+
+      expect(response).to have_http_status(:unauthorized)
+
+      body = JSON.parse(response.body, symbolize_names: true)
+
+      expect(body).to have_key(:error)
+      expect(body[:error]).to eq("Invalid API key")
+    end
+  end
 end
 # rubocop:enable Metrics/BlockLength
