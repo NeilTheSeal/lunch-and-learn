@@ -45,6 +45,7 @@ RSpec.describe "Recipes by Country" do
     end
   end
 
+  # xit because VCR will often try to use a new cassette
   xit "happy path - no country provided" do
     VCR.use_cassette(
       "no_country_provided",
